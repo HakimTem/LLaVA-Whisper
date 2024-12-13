@@ -49,3 +49,6 @@ def build_vision_projector(config, delay_load=False, **kwargs):
         return IdentityMap()
 
     raise ValueError(f'Unknown projector type: {projector_type}')
+
+def build_audio_projector(config, delay_load=False, **kwargs):
+    return build_vision_projector(config, delay_load, kwargs)
